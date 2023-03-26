@@ -1,0 +1,24 @@
+@import './base.scss';
+body {
+    /* We need to assaign this CSS Custom property to the body instead of :root, because of CSS Specificity and codepen stylesheet placement before loaded CKE5 content. */
+    --ck-z-default: 3100;
+    --ck-z-modal: calc(var(--ck-z-default) + 3999);
+}
+
+/*
+ * Bring back the default <ul> and <li> appearance.
+ *
+ * See: https://github.com/Dogfalo/materialize/blob/v1-dev/sass/components/_global.scss#L28-L37
+ */
+ .ck.ck-content ul,
+ .ck.ck-content ul li {
+     list-style-type: inherit;
+ }
+ 
+ .ck.ck-content ol,
+ .ck.ck-content ul {
+     /* Default user agent stylesheet, you can change it to your needs. */
+     padding-left: 40px;
+ }
+
+
